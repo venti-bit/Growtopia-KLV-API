@@ -36,7 +36,7 @@ const server = http.createServer((req, res) => {
 
 function generate_hash() {
 
-  return Math.floor(Math.random() * (/*max*/ 2147483647 - /*min*/ -2147483648 + 1)) + /*min*/ -2147483648;
+  return crypto.randomInt(-2147483648, 2147483647);
 
 }
 
