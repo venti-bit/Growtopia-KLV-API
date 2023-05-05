@@ -68,11 +68,11 @@ function create_klv(game_version, protocol, hash, rid) {
 
   
 
-  return get_md5_checksum(`${salts[0]}${game_version}${salts[1]}${hash}${salts[2]}${rid}${salts[3]}${protocol}`).toUpperCase();
+  return get_md5_checksum(`${game_version}${salts[0]}${protocol}${salts[1]}${hash}${salts[2]}${rid}${salts[3]}`).toUpperCase(); //credits to teocodes.
 
 }
 
-server.listen(8080, () => {
+server.listen(80, () => {
 
   console.log('API Server is running.');
 
