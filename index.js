@@ -10,9 +10,9 @@ const server = http.createServer((req, res) => {
 
   if (pathname === '/create_klv') {
 
-    const game_version = parseFloat(query.game_version) || 4.23;
+    const game_version = parseFloat(query.game_version) || 4.24;
 
-    const protocol = parseInt(query.protocol) || 189;
+    const protocol = parseInt(query.protocol) || 190;
 
     const hash = generate_hash();
 
@@ -56,13 +56,13 @@ function create_klv(game_version, protocol, hash, rid) {
 
   const salts = [
 
-    "0b02ea1d8610bab98fbc1d574e5156f3",
+    "42e2ae20305244ddaf9b0de5e897fc74",
 
-    "b414b94c3279a2099bd817ba3a025cfc",
+    "ccc18d2e2ca84e0a81ba29a0af2edc9c",
 
-    "bf102589b28a8cc3017cba9aec1306f5",
+    "92e9bf1aad214c69b1f3a18a03aae8dc",
 
-    "dded9b27d5ce7f8c8ceb1c9ba25f378d"
+    "58b92130c89c496b96164b776d956242"
 
   ];
 
